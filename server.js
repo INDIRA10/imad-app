@@ -23,13 +23,12 @@ var articleone ={
 }
 
 function createTemplate(data){
-    var title= data.title;
-    var date= data.date;
-    var heading= data.heading;
-    var content = data.content;
-       
-   }
- var htmlTemplate =`
+   var title=data.title;
+   var date=data.date;
+   var hesding=data.heading;
+   var content=data.content;
+   
+   var htmlTemplate=`
  <html>
  <head>
      <title>
@@ -64,6 +63,7 @@ function createTemplate(data){
 `;
 return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
