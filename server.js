@@ -9,7 +9,8 @@ var articleone ={
     title:'ARTICLE ONE INDIRA RAJAGOPAL',
     heading:'Article One',
     date:'Sept 05,2016',
-    content:`<p>
+    content:`
+                   <p>
                      this is the content for my first article this is the content for my first article
                      this is the content for my first article
                   </p>
@@ -20,7 +21,7 @@ var articleone ={
                       
                   </p>`
     
-}
+};
 
 function createTemplate(data){
    var title=data.title;
