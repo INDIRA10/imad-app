@@ -53,7 +53,7 @@ function createTemplate(data){
                   $ {date}
               </div>
               <div>
-                  {content}
+                 $ {content}
                       
                   </p>
               </div>
