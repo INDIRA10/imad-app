@@ -7,6 +7,6 @@ element.innerHTML = 'NEW VALUE-INDIRA RAJAGOPAL';
 
 //move the image
 var img=document.getElementById('madi');
-   img.onclick=function () {
- img.style.marginleft= '100px';  
+   img.onclick=function() {
+ img.style.marginLeft= '100px';  
 };
