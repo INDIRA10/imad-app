@@ -1,5 +1,5 @@
 //countercode
-var button= document.getElementByd('counter');
+var button= document.getElementById('counter');
 var counter= 0;
 button.onclick= function(){
     //make a request to the counterpoint
