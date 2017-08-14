@@ -1,21 +1,13 @@
-console.log('Loaded!');
-
-//Change the text of the main-text div
-var element=document.getElementById('main-text');
-
-element.innerHTML = 'NEW VALUE-INDIRA RAJAGOPAL';
-
-//move the image
-var img= document.getElementById('madi');
-
-var marginLeft=0;
-
-function moveRight () {
-    marginLeft= marginLeft+1;
-    img.style.marginLeft= marginLeft+'px';
+//countercode
+var button= document.getElementByd('counter');
+var counter= 0;
+button.onclick= function(){
+    //make a request to the counterpoint
+    
+    //capture the response and store it in a variable
+    
+    //render the variable in the correct span
+    counter = counter+1;
+    var span =  document.get.ElementById('count');
+    span.innerHTML= counter.toString();
 }
-
- img.onclick= function() {
- var interval = setInterval (moveRight, 50);
- 
-};
