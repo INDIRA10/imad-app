@@ -23,7 +23,7 @@ var articleOne = {
 
 };
 
-function createTemplate(data){
+function createTemplate(data) {
    var title=data.title;
    var date=data.date;
    var hesding=data.heading;
@@ -55,7 +55,6 @@ function createTemplate(data){
               <div>
                  $ {content}
                       
-                  </p>
               </div>
               </div>
     
