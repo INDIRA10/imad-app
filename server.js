@@ -47,13 +47,13 @@ function createTemplate(data) {
               </div>
               <hr/>
               <h3>
-                $ {heading}
+                ${heading}
               </h3>
               <div>
-                  $ {date}
+                  ${date}
               </div>
               <div>
-                 $ {content}
+                 ${content}
                       
               </div>
               </div>
@@ -76,7 +76,7 @@ app.get('/', function (req, res) {
  });
  
  
-app.get("/article-one",function(req, res){
+app.get("/article-one",function(req, res) {
  res.send(createTemplate(articleOne));  
 });
 
