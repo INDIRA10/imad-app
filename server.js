@@ -93,18 +93,19 @@ app.get("/article-two",function(req, res){
  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
 
-var pool = new pool(config);
+var pool = new Pool(config);
 
 app.get('/test-db', function(req,res){
     //make a select request
     // return respone with a requests
-    pool.query('SELECT*FROM test', function (err, result){
+    pool.query('SELECT * FROM test', function (err, result){
         if (err) {
                    res.status(500).send(err.toString());
-                 } else     
-          res.send(JSON.stringify(result)); 
+                 } else {    
+                   res.send(JSON.stringify(result)); 
+                 }
     });
-})
+});
 
 app.get("/article-three",function(req, res){
     res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
