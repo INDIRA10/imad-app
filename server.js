@@ -75,6 +75,16 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+function hash (input) {
+ // how do we create hash   
+}
+     
+}
+app.get('/hash/:input', function (req, res) {
+    var hashedString= hash(req.params.input);
+    res.send(hashString);
+});
  
  var counter= 0;
  app.get('/counter',function(req, res){
