@@ -97,7 +97,11 @@ app.get('/hash/:input',function (req, res) {
  });
  
  
-app.get("/article-one",function(req, res) {
+app.get("/articles/:article-one",function(req, res) {
+    //articlename == article-one
+    //articles{articlename} == {} content object for article-one
+    var articlename=req.params.articlename;
+    pool.query(SELECT * FROM article where title = )
  res.send(createTemplate(articleOne));  
 });
 
