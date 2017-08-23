@@ -97,23 +97,25 @@ app.get('/hash/:input',function (req, res) {
  });
  
  
-app.get("/articles/:article-one",function(req, res) {
-    //articlename == article-one
+app.get('/articles/:article-one', function(req, res) {
+    //articleName == article-one
     //articles{articlename} == {} content object for article-one
    
-    pool.query("SELECT* FROM article where title = " * + req.params.articleName,function(err result){
+    pool.query("SELECT* FROM article where title=" +req.params.articleName,function(err,result){
        if (err){
-       res.status(500).send(err.toString();
+       res.status(500).send(err.toString());
        } else {
-         if results.rows.length = 0){
-             res.string(404).send ('Article not found');
+           
+         if(result.rows.length ===0) {
+             res.status(404).send('Article not found');
          } else {
-             var article.data -result.rows[0];
-         }
+             var articleData =result.rows[0];
+         
            res.send(createTemplate(articleData));  
-                    } 
-            }
- 
+          } 
+    }
+            
+});
 });
 
 app.get("/article-two",function(req, res){
