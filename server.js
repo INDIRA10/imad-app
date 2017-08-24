@@ -97,7 +97,7 @@ app.get('/hash/:input',function (req, res) {
  });
  var pool = new Pool(config);
 
-app.get('/test-db', function(req,res){
+app.get('/test-db', function(req, res){
     //make a select request
     // return respone with a requests
     pool.query('SELECT * FROM test', function (err, result){
