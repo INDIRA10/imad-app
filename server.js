@@ -97,7 +97,7 @@ app.get('/hash/:input',function (req, res) {
  });
  
  
-app.get('/article', function(req, res) {
+app.get('/article-db', function(req, res) {
     //articleName == article-one
     //articles{articlename} == {} content object for article-one
     //SELECT*FROM article WHERE title = 'article-one'
