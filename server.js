@@ -97,12 +97,12 @@ app.get('/hash/:input',function (req, res) {
  });
  
  
-app.get('/article-db', function(req, res) {
+app.get('articles/:articleName', function(req, res) {
     //articleName == article-one
     //articles{articlename} == {} content object for article-one
     //SELECT*FROM article WHERE title = 'article-one'
    
-    pool.query("SELECT* FROM article where title= '" + req.params.articleName + "'",function(err,result){
+    pool.query("SELECT * FROM article where title= '" + req.params.articleName + "'",function(err,result){
        if (err){
        res.status(500).send(err.toString());
        } else {
