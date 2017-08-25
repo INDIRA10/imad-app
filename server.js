@@ -87,6 +87,16 @@ app.get('/hash/:input',function (req, res) {
     var hashedString= hash(req.params.input,'this-is-some-random-string');
     res.send(hashedString);
 });
+
+aap.get('create user', function (req,res){
+    
+    
+    var salt = crypto.get. RandomBytes(128).toString('hex');
+    
+    var dbString = hash(password,salt);
+    
+}
+
  
  var counter= 0;
  app.get('/counter',function(req, res){
